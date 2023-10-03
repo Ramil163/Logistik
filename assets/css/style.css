@@ -233,6 +233,9 @@ padding: 60px 0;
     .section__title span {
         color: #0D53F2;
     }
+    .section--gray {
+        background-color: #F9F9F9;
+    }
     
 
 /*Services*/
@@ -467,3 +470,16 @@ margin-bottom: 12px;
     color: #585858;
     line-height: 1.4;
 }
+
+/*Team*/
+
+.team {
+display: flex;
+flex-wrap: wrap;
+margin: 0 -15px;
+}
+.team__col {
+    padding: 0 15px;
+    width: 33,333%;
+}
+    
