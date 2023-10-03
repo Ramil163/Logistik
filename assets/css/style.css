@@ -416,3 +416,54 @@ z-index: 1;
     width: 50%;
 }
 
+.benefits-list {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    padding-left: 50px;
+    background-image: linear-gradient(to bottom, #fff 40%, #A5A5A5 40%);
+    background-size: 2px 35px ;
+    background-repeat: repeat-y;
+    background-position: left 12px top -4px;
+}
+.benefits-list::before,
+.benefits-list::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+}
+.benefits-list::before {
+    background: url('/assets/images/pin-start.svg');
+    top: -5px;
+    background-color: #fff;
+
+}
+.benefits-list::after {
+    background: url('/assets/images/pin-finish.svg');
+    bottom: -11px;
+    background-color: #fff;
+
+
+}
+
+.benefits-list__item:not(:last-child) {
+    margin-bottom: 35px;
+}
+.benefits-list__title {
+font-family: "Lato", sans-serif;
+font-size: 21px;
+color: #2C2C2C;
+font-weight: 900;
+line-height: 1.2;
+margin-bottom: 12px;
+}
+.benefits-list__text {
+    font-size: 15px;
+    color: #585858;
+    line-height: 1.4;
+}
