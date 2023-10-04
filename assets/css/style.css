@@ -200,6 +200,7 @@ border-bottom-color: #fff;
 .btn {
     display: inline-block;
     vertical-align: middle;
+    overflow: hidden;
     padding: 15px 45px;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -212,14 +213,43 @@ border-bottom-color: #fff;
     line-height: 1.1;
     border-radius: 5px;
     text-decoration: none;
-
+    transition: background-size .2s linear;
+position: relative;
+}
+.btn:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+}
+.btn span {
+    position: relative;
+    z-index: 2;
 }
 .btn--orange {
     background-image: linear-gradient(to right, #FF903E, #FF2C2C) ;
 }
-
+.btn--orange:hover {
+    background-size: 150%;
+}
 .btn--block {
+    display: block;
     width: 100%;
+}
+
+.btn--shadow {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2) ;
+}
+.btn:hover::before {
+    opacity: .2;
+
 }
 /* Section */
 
@@ -588,3 +618,45 @@ line-height: 1.2;
     text-transform: uppercase;
   
 }
+
+/*news*/
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+.news__item {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.news__title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: 2C2C2C;
+}
+.news__title a {
+    color: inherit;
+    text-decoration: none;
+}
+.news__title a:hover{
+text-decoration: underline;
+}
+
+.news__text {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #585858;
+
+}
+.news__date {
+    display: block;
+    font-size: 12px;
+    color: #6E6E6E;
+}
+
