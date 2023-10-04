@@ -660,3 +660,48 @@ text-decoration: underline;
     color: #6E6E6E;
 }
 
+/*Footer*/
+
+.footer {
+ background-color: #F9F9F9;
+padding: 40px 0;
+background-image: url("/assets/images/tire-track-left.svg"), url("/assets/images/tire-track-png-right.svg");
+background-repeat: no-repeat;
+background-position: left -50px bottom -20px, right -50px bottom -20px;
+text-align: center;
+margin-top: 60px;
+}
+
+.footer__contacts {
+    margin: 25px 0;
+   
+    color: #585858;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+}
+.footer__contacts p {
+    margin: 0 0 5px; 
+
+}
+.footer__contacts a {
+text-decoration: none;
+color: inherit;
+}
+
+.footer__contacts a:hover {
+    text-decoration: underline;
+}
+
+.footer__nav {
+    font-size: 12px;
+
+}
+.footer__nav a {
+    margin: 0 5px;
+    color: #004AF2; 
+    text-decoration: none;
+}
+.footer__nav a:hover {
+text-decoration: underline;
+}
